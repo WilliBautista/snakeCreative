@@ -1,0 +1,125 @@
+//-----------------------------------
+// Menu components
+//-----------------------------------
+
+// Hamburguer
+.header__rigth {
+  .main-menu-burguer {
+    @include reset-input;
+    @include size(32px, 24px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include brp($lg) {
+      display: none;
+    }
+
+    span {
+      @include size(100%, 5px);
+      background-color: $color1;
+      display: block;
+      opacity: 1;
+      transition: all $ttime ease;
+      transform-origin: 0;
+    }
+  }
+
+  &.is-open {
+    span {
+      &:nth-child(2) {
+        opacity: 0;
+      }
+
+      &:first-child {
+        transform: rotate(45deg);
+      }
+
+      &:last-child {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}
+
+// Main menu
+.main-menu {
+  &__list {
+    display: flex;
+    text-align: center;
+    gap: 10px;
+  }
+
+  &__item {
+    a {
+      letter-spacing: 1px;
+      padding: 10px 24px;
+      display: block;
+      color: $color3;
+    }
+
+    &.is-active a {
+      background-color: $color1;
+      color: $white;
+    }
+  }
+
+  &--filters {
+    margin-bottom: 40px;
+
+    @include brp($md) {
+      margin-bottom: 70px;
+    }
+
+    .list {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2px;
+
+      @include brp($sm) {
+        gap: 10px
+      }
+    }
+  }
+}
+
+.header {
+  @include brp($lg, max) {
+    .main-menu {
+      @include size(100%);
+      background-color: $color1;
+      color: $white;
+      max-width: 480px;
+      position: fixed;
+      right: 0;
+      top: 61px;
+      text-align: center;
+      transition: transform $ttime ease;
+      transform: scaleY(0);
+      transform-origin: top;
+      z-index: 2;
+
+      &__list {
+        display: initial;
+      }
+
+      &__item {
+        a {
+          @include size(100%, 42px);
+          display: block;
+          line-height: 42px;
+          padding: 0;
+          color: $white;
+        }
+
+        &.is-active a {
+          background-color: lighten($color1, 10);
+        }
+      }
+    }
+
+    &__rigth.is-open .main-menu {
+      transform: scaleX(1);
+    }
+  }
+}

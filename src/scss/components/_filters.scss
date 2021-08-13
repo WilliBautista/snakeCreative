@@ -1,0 +1,45 @@
+//-----------------------------------
+// Filters
+//-----------------------------------
+
+.view-type {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  margin-bottom: 40px;
+
+  @include brp($md) {
+    margin-bottom: 70px;
+  }
+
+  &__gallery,
+  &__list {
+    @include esize(14px);
+
+    span {
+      display: block;
+      background-color: $color1;
+    }
+  }
+
+  &__gallery a {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 2px;
+
+    span {
+      @include esize(6px);
+    }
+  }
+
+  &__list a {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    span {
+      @include size(100%, 5px);
+    }
+  }
+}

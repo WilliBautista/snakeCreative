@@ -1,0 +1,144 @@
+//-----------------------------------
+// Header layout styles
+//-----------------------------------
+
+.main {
+  .imposter {
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      @include esize(100%);
+      content: '';
+      display: block;
+      background-color: $rgba2;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    img {
+      @include size(calc(100vw - var(--scroll-bar)), calc(100vh - 61px));
+      overflow: hidden;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+
+      @include brp($lg) {
+        height: calc(100vh - 101px);
+      }
+    }
+
+    &__overlay {
+      @include size(100%);
+      color: $white;
+      left: 50%;
+      max-width: 1024px;
+      margin: 0 auto;
+      position: absolute;
+      padding: 0 16px;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    &__title {
+      font-size: szrem(24);
+      line-height: szrem(28);
+      letter-spacing: 5px;
+
+      @include brp($md) {
+        font-size: szrem(38);
+      }
+    }
+
+    &__subtitle {
+      line-height: szrem(18);
+      max-width: 480px;
+      margin: 0 auto 30px;
+    }
+  }
+
+  .gallery-container {
+    padding: 40px 16px;
+    max-width: 1170px;
+    margin: 0 auto;
+
+    @include brp($md) {
+      padding: 70px 24px;
+    }
+
+    .gallery {
+      column-count: var(--columns);
+      column-gap: var(--gutter);
+      margin: 0 -16px 30px;
+
+      @include brp($sm) {
+        margin: 0;
+        margin-bottom: 70px;
+      }
+
+      .project {
+        position: relative;
+        margin: 0;
+        margin-bottom: var(--gutter);
+
+        img {
+          display: block;
+        }
+
+        &__overlay {
+          @include esize(100%);
+          position: absolute;
+          top: 0;
+          left: 0;
+          display: flex;
+          color: $white;
+          justify-content: center;
+          align-items: center;
+          background-color: $rgba2;
+          display: flex;
+          flex-direction: column;
+          transform: scale(0);
+          transition: transform $ttime ease;
+
+          hr {
+            @include size(80%, 1px);
+            border: 0;
+            margin: 0;
+            background-color: $white;
+            display: none;
+          }
+
+          h3 {
+            font-size: szrem(24);
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            line-height: szrem(24);
+            font-family: $font2;
+
+            + hr {
+              display: block;
+            }
+          }
+
+          p {
+            a {
+              font-family: $font2;
+              text-decoration: underline;
+            }
+          }
+        }
+
+        &:hover .project__overlay {
+          transform: scale(1);
+        }
+      }
+    }
+
+    .btn {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+}

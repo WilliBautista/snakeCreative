@@ -1,0 +1,57 @@
+//-----------------------------------
+// Fonts
+//-----------------------------------
+
+$fontsPath : '../assets/fonts/';
+
+// Montserrat Font
+@font-face {
+  font-family: 'montserratRegular';
+  src: url($fontsPath + 'Montserrat/Montserrat-Regular.woff2') format('woff2'),
+    url($fontsPath + 'Montserrat/Montserrat-Regular.woff') format('woff'),
+    url($fontsPath + 'Montserrat/Montserrat-Regular.ttf') format('truetype');
+  font-style: normal;
+  font-display: swap;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'montserratMedium';
+  src: url($fontsPath + 'Montserrat/Montserrat-Medium.woff2') format('woff2'),
+    url($fontsPath + 'Montserrat/Montserrat-Medium.woff') format('woff'),
+    url($fontsPath + 'Montserrat/Montserrat-Medium.ttf') format('truetype');
+  font-style: normal;
+  font-display: swap;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'montserratBold';
+  src: url($fontsPath + 'Montserrat/Montserrat-Bold.woff2') format('woff2'),
+    url($fontsPath + 'Montserrat/Montserrat-Bold.woff') format('woff'),
+    url($fontsPath + 'Montserrat/Montserrat-Bold.ttf') format('truetype');
+  font-style: normal;
+  font-display: swap;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'montserratBlack';
+  src: url($fontsPath + 'Montserrat/Montserrat-Black.woff2') format('woff2'),
+    url($fontsPath + 'Montserrat/Montserrat-Black.woff') format('woff'),
+    url($fontsPath + 'Montserrat/Montserrat-Black.ttf') format('truetype');
+  font-style: normal;
+  font-display: swap;
+  font-weight: 900;
+}
+
+// Questrial
+@font-face {
+  font-family: 'questrialRegular';
+  src: url($fontsPath + 'Questrial/Questrial-Regular.woff2') format('woff2'),
+    url($fontsPath + 'Questrial/Questrial-Regular.woff') format('woff'),
+    url($fontsPath + 'Questrial/Questrial-Regular.ttf') format('truetype');
+  font-style: normal;
+  font-display: swap;
+  font-weight: normal;
+}

@@ -1,0 +1,62 @@
+//-----------------------------------
+// Variables
+//-----------------------------------
+
+// Colors
+$white   : #FFFFFF;
+$black   : #000000;
+
+$color1  : #FF5672;
+$color2  : #F6F6F6;
+$color3  : #A9A9A9;
+$color4  : #7A7A7A;
+
+// RGBA
+$rgba1 : rgba($black, .3);
+$rgba2 : rgba($color1, .5);
+
+// Fonts
+$font1 : 'montserratRegular', Sans-serif, Arial;
+$font2 : 'montserratMedium', $font1;
+$font3 : 'montserratBold', $font1;
+$font4 : 'montserratBlack', $font1;
+$font5 : 'questrialRegular', $font1;
+
+// Images
+$imagesPath : '../assets/images';
+
+// Transitions time
+$ttime : .3s;
+
+// Breakpoints
+$xs  : 0;
+$sm  : 576;
+$md  : 768;
+$lg  : 992;
+$xl  : 1200;
+$xxl : 1400;
+
+// Others
+$networks: facebook, google, browser, twitter, youtube;
+
+// Css variables
+:root {
+  --base-font-size: 14px;
+
+  --gutter: 24px;
+  --columns: 1;
+}
+
+@include brp($md) {
+  :root {
+    --base-font-size: 16px;
+
+    --columns: 2;
+  }
+}
+
+@include brp($xl) {
+  :root {
+    --columns: 3;
+  }
+}

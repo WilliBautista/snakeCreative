@@ -1,0 +1,35 @@
+//-----------------------------------
+// Specific mixins for the app
+//-----------------------------------
+
+// Reset input styles
+@mixin reset-input {
+  appearance: none;
+  background-color: initial;
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+  margin: 0;
+}
+
+// Input text
+@mixin form-text($fontcolor) {
+  @include reset-input;
+  padding: 8px;
+  color: $fontcolor;
+  border-bottom: 1px solid $fontcolor;
+  outline: none;
+}
+
+// Button primary
+@mixin button-generate($color, $bgcolor) {
+  @include size(auto, 40px);
+  @include reset-input;
+  color: $color;
+  background-color: $bgcolor;
+  padding: 0 24px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 1em;
+  cursor: pointer;
+}

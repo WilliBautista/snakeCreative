@@ -1,0 +1,71 @@
+//-----------------------------------
+// Form components
+//-----------------------------------
+
+// Main search form
+.main-search {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+  justify-content: space-between;
+
+  .form__group {
+    flex: 1;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform $ttime ease;
+
+    @include brp($lg) {
+      @include size(50%);
+      position: fixed;
+      top: 61px;
+      right: 0;
+      max-width: 480px;
+      transform: scaleY(0);
+      transform-origin: top;
+      padding: 24px 16px;
+      background-color: $color1;
+      z-index: 2;
+    }
+
+    @include brp($lg) {
+      top: 101px;
+    }
+
+    input {
+      @include size(100%, 32px);
+      @include form-text($color1);
+
+      @include brp($md) {
+        border-color: $white;
+        color: $white;
+
+        &::-webkit-input-placeholder {
+          color: $white;
+        }
+
+        &::-moz-placeholder {
+          color: $white;
+        }
+      }
+    }
+  }
+
+  &.is-open {
+    .form__group {
+      transform: scaleX(1);
+
+      @include brp($lg) {
+        transform: scaleY(1);
+      }
+    }
+  }
+
+  .form__submit {
+    @include reset-input;
+    @include esize(32px);
+    background: bg-icon(search, center/24px);
+    font-size: 0;
+    cursor: pointer;
+  }
+}

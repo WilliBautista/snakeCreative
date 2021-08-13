@@ -1,0 +1,20 @@
+//-----------------------------------
+// General mixins
+//-----------------------------------
+
+// Size
+@mixin size($width, $height: auto) {
+  width: $width;
+  height: $height;
+}
+
+// Equal size
+@mixin esize($size) {
+  @include size($size, $size);
+}
+
+// Responsive images
+@mixin responsive-image {
+  @include size(100%);
+  max-width: 100%;
+}

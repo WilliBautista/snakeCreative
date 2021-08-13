@@ -1,0 +1,58 @@
+//-----------------------------------
+// Header layout styles
+//-----------------------------------
+
+.header {
+  box-shadow: 0 0 4px $rgba1;
+  background-color: $white;
+
+  &--sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+
+    + main {
+      padding-top: 61px;
+    }
+  }
+
+  &__wrapper {
+    @include size(100%);
+    align-items: center;
+    display: flex;
+    gap: 16px;
+    justify-content: space-between;
+    padding: 8px 16px;
+    max-width: 1600px;
+    margin: 0 auto;
+
+    @include brp($lg) {
+      padding-top: 28px;
+      padding-bottom: 28px;
+    }
+  }
+
+  &__left {
+    flex-shrink: 0;
+
+    @include brp($lg) {
+      flex: 1;
+    }
+
+    img {
+      @include brp($sm) {
+        @include size(auto, 42px);
+      }
+    }
+  }
+
+  &__middle {
+    flex: 1;
+
+    @include brp($lg) {
+      order: 1;
+      flex: initial;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+//-----------------------------------
+// Mixin Media Queries
+//-----------------------------------
+
+//Width
+@mixin brp($punto, $type: min, $units: px, $means: screen) {
+  //Max => hasta //min => desde
+  @if      $type == max { @media only #{$means} and (max-width: $punto + $units) { @content; }}
+  @else if $type == min { @media only #{$means} and (min-width: ($punto + 1) + $units) { @content; }}
+}

@@ -1,0 +1,161 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dist/css/styles.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Sneak Creative Portoflio</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header" id="header">
+      <div class="header__wrapper">
+        <div class="header__left">
+          <!-- Brand -->
+          <a href="index.html" title="Ir a la página principal de Sneak Creative Portoflio">
+            <picture>
+              <source media="(min-width: 577px)" srcset="logo1.png">
+              <img src="logo2.png" alt="Logo Sneak Creative Portoflio" width="42" height="42">
+            </picture>
+          </a>
+          <!-- End -->
+        </div>
+
+        <div class="header__middle">
+          <!-- Form search -->
+          <form action="index.html" class="form main-search" id="main-search">
+            <div class="form__group">
+              <input type="text" class="form__text" placeholder="Buscar">
+            </div>
+            <input type="submit" value="Buscar" title="Buscar" class="form__submit">
+          </form>
+          <!-- End -->
+        </div>
+
+        <div class="header__rigth">
+          <button id="main-menu-burguer" class="main-menu-burguer" type="button" title="Menú hamburguesa">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <!-- Main menu -->
+          <nav class="main-menu main-menu--header" aria-label="Main">
+            <ul class="list main-menu__list">
+              <li class="list__item main-menu__item is-active">
+                <a href="#" class="list__link main-menu__link" data-category="all">All</a>
+              </li>
+              <li class="list__item main-menu__item">
+                <a href="#" class="list__link main-menu__link" data-category="branding">Branding</a>
+              </li>
+              <li class="list__item main-menu__item">
+                <a href="#" class="list__link main-menu__link" data-category="web">Web</a>
+              </li>
+              <li class="list__item main-menu__item">
+                <a href="#" class="list__link main-menu__link" data-category="photography">Photography</a>
+              </li>
+              <li class="list__item main-menu__item">
+                <a href="#" class="list__link main-menu__link" data-category="app">App</a>
+              </li>
+            </ul>
+          </nav>
+          <!-- End -->
+        </div>
+      </div>
+    </header>
+    <!-- End -->
+
+    <!-- Main content -->
+    <main class="main" id="main">
+      <div class="main__wrapper">
+        <section class="imposter">
+          <picture>
+            <source media="(min-width: 1900px)" srcset="dist/assets/images/files/banner/mountainLargeImage.jpg">
+            <source media="(min-width: 640px)" srcset="dist/assets/images/files/banner/mountainMediumImage.jpg">
+            <source media="(min-width: 320px)" srcset="dist/assets/images/files/banner/mountainSmallImage.jpg">
+            <img src="dist/assets/images/files/banner/mountainMediumImage.jpg" alt="Imagen principal">
+          </picture>
+          <div class="imposter__overlay">
+            <h1 class="imposter__title">EXPLORE BEYOND HORIZON</h1>
+            <p class="imposter__subtitle">Magna mundi referrentur quo, no rebum dignissim qui. Per quodsi accusata id, agam labores.</p>
+            <button type="button" class="btn btn--white" id="btn-our-work">View our work</button>
+          </div>
+        </section>
+
+        <section class="gallery-container">
+          <div class="loading fadeIn">
+            <p>Loading...</p>
+          </div>
+          <ul class="list view-type">
+            <li class="list__item view-type__gallery">
+              <a href="#" class="list__link view-type__link">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </a>
+            </li>
+            <li class="list__item view-type__list">
+              <a href="#" class="list__link view-type__gallery">
+                <span></span>
+                <span></span>
+              </a>
+            </li>
+          </ul>
+          <nav class="main-menu main-menu--filters" aria-label="Main">
+            <ul class="list main-menu__list">
+              <li class="list__item main-menu__item is-active">
+                <a href="#" class="list__link main-menu__link" data-category="all">All</a>
+              </li>
+              <li class="list__item main-menu__item">
+                <a href="#" class="list__link main-menu__link" data-category="branding">Branding</a>
+              </li>
+              <li class="list__item main-menu__item">
+                <a href="#" class="list__link main-menu__link" data-category="web">Web</a>
+              </li>
+              <li class="list__item main-menu__item">
+                <a href="#" class="list__link main-menu__link" data-category="photography">Photography</a>
+              </li>
+              <li class="list__item main-menu__item">
+                <a href="#" class="list__link main-menu__link" data-category="app">App</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="gallery" id="gallery"></div>
+          <button type="button" class="btn btn--pink" id="show-me-more" data-ccategory="all">Show Me More</button>
+        </section>
+        <div class="scroll-to-top fadeIn"></div>
+      </div>
+    </main>
+    <!-- End -->
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+      <p>&copy; 2021 - <span>Sneak</span> All Right Reserved</p>
+      <ul class="list list-networks">
+        <li class="list__item list-networks__item list-networks__item--facebook">
+          <a href="#" class="list__link" title="Facebook"></a>
+        </li>
+        <li class="list__item list-networks__item list-networks__item--twitter">
+          <a href="#" class="list__link" title="Twitter"></a>
+        </li>
+        <li class="list__item list-networks__item list-networks__item--browser">
+          <a href="#" class="list__link" title="Browser"></a>
+        </li>
+        <li class="list__item list-networks__item list-networks__item--google">
+          <a href="#" class="list__link" title="Google+"></a>
+        </li>
+        <li class="list__item list-networks__item list-networks__item--youtube">
+          <a href="#" class="list__link" title="YouTube"></a>
+        </li>
+      </ul>
+    </footer>
+    <!-- End -->
+
+    <!-- Scripts -->
+    <script src="dist/js/index.js"></script>
+    <!-- End -->
+  </body>
+</html>

@@ -1,0 +1,35 @@
+//-----------------------------------
+// Header layout styles
+//-----------------------------------
+
+.footer {
+  text-align: center;
+  padding: 40px 0 70px;
+
+  p {
+    font-family: $font5;
+    margin-bottom: 30px;
+    color: $color3;
+
+    span {
+      color: $color1;
+    }
+  }
+
+  .list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+
+    &-networks__item {
+      @each $network in $networks {
+        &--#{$network} a {
+          @include esize(16px);
+          display: block;
+          background: bg-icon($network, center/cover);
+        }
+      }
+    }
+  }
+}

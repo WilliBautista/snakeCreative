@@ -1,0 +1,50 @@
+//-----------------------------------
+// Global styles
+//-----------------------------------
+
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  @include esize(100%);
+}
+
+body {
+  background-color: $white;
+  font-family: $font5;
+  font-size: 14px;
+  letter-spacing: .5px;
+  line-height: 16px;
+  color: $color4;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.responsive-image {
+  @include responsive-image;
+}
+
+.scroll-to-top {
+  @include esize(32px);
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  cursor: pointer;
+  background: $color1 bg-icon(arrow-top, center/20px);
+}
+
+.fadeIn {
+  animation: fadeIn .5s;
+}

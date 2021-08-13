@@ -1,0 +1,14 @@
+//-----------------------------------
+// Buttons
+//-----------------------------------
+
+.btn {
+  &--white {
+    @include button-generate($color1, $white);
+  }
+
+  &--pink {
+    @include button-generate($white, $color1);
+    text-transform: capitalize;
+  }
+}

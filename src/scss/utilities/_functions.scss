@@ -1,0 +1,33 @@
+@use 'sass:math';
+
+//-----------------------------------
+// Functions
+//-----------------------------------
+
+// Size rem
+// Asumes the default size is 16px
+@function szrem($value_px, $base: 16) {
+  @return math.div($value_px, $base) + rem;
+}
+
+// Return background with icon
+@function bg-icon($icon, $extra:null, $format:svg) {
+  $path: $imagesPath + '/';
+
+  @if $format=='svg' {
+    $path: $imagesPath + '/svg/';
+  }
+
+  @return $extra no-repeat url($path + $icon + '.#{$format}');
+}
+
+// Return only the icon
+@function icon($icon, $format: svg) {
+  $path: $imagesPath + '/';
+
+  @if $format=='svg' {
+    $path: $imagesPath + '/svg/';
+  }
+
+  @return url($path + $icon + '.#{$format}');
+}
