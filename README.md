@@ -1,12 +1,12 @@
 # SNAKE CREATIVE PORTAFOLIO
 
-# Condiciones:
-* No se pueden utilizar frameworks css.
-* No se puede utilizar jquery, ni frameworks javascript.
-* Puede utilizar run taskers, y preprocesadores css.
-* La sección la grilla de  portafolio, debe traerse dinámicamente con un json.
-* Usar hml5.
-* Usar javascript en las últimas versiones es6,es7,es8.
-* La fuente es Google Montserrat and Questrial.
-* Las imágenes para el portafolio se pueden usar https://unsplash.com/.
-* La versión responsive debe llevar un estilo de menú mobile.
+## Características:
+
+1. Usabilidad
+2. Optimización
+3. Métodologia BEM
+4. Mobile first
+5. Buscador funcional
+6. Ver más funcional
+7. Filtros por categoría
+8. Consumo de API [Unpash](https://unsplash.com/documentation) para las imágenes
